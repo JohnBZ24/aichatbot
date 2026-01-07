@@ -1,0 +1,100 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.page {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  padding: transparent;
+}
+
+.form {
+  width: min(640px, 100%);
+  background: white;
+  border: 1px solid #e7e7ee;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  height: 54px; /* bigger */
+  width: 100%;
+  padding: 0 14px;
+  font-size: 16px;
+  border: 1px solid #d9d9e3;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 120ms ease;
+}
+
+.input::placeholder {
+  color: #9a9aa6;
+}
+
+.input:focus {
+  border-color: #2c269e;
+  box-shadow: 0 0 0 4px rgba(24, 16, 190, 0.15);
+}
+
+.btn {
+  height: 48px;
+  width: 160px;
+  border: none;
+  border-radius: 12px;
+  background: #264588;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+body {
+  background: #dbeafe;
+}
