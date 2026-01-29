@@ -14,13 +14,25 @@ function App() {
   }
   return (
     <>
-      <form>
-        <label htmlFor="key">Enter your openrouter key</label>
-        <input id="key" onChange={saveInput} />
-        <button onClick={handleKey}>submit </button>
+      <form onSubmit={handleKey} className="mt-2">
+        <label htmlFor="key" className=" ml-2 mr-2 font-sans ">
+          Enter your open-router key
+        </label>
+        <input
+          id="key"
+          onChange={saveInput}
+          className="rounded-md border border-black p-2"
+        />
+        <button
+          type="submit"
+          className="ml-2 px-3 py-2 bg-black text-white rounded-md"
+        >
+          submit{" "}
+        </button>
       </form>
       <ChatMessages chatmessages={chatmessages} />
       <ChatInput
+        apiKey={key}
         chatmessages={chatmessages}
         setChatMessages={setChatMessages}
       />
