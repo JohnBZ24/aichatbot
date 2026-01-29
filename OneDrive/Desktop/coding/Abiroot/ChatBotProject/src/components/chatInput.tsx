@@ -6,13 +6,17 @@ type chatInput = {
   setChatMessages: React.Dispatch<
     React.SetStateAction<{ message: string; sender: string }[]>
   >;
+  apiKey: string;
 };
-export function ChatInput({ chatmessages, setChatMessages }: chatInput) {
+export function ChatInput({
+  chatmessages,
+  setChatMessages,
+  apiKey,
+}: chatInput) {
   const [inputText, setinputText] = useState<string>("");
   async function handleButton() {
     const headers = {
-      Authorization:
-        "Bearer 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",
+      Authorization: apiKey,
       "content-Type": "application/json",
     };
     const post = await axios.post(
